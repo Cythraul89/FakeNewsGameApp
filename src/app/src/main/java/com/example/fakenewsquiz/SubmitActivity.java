@@ -16,7 +16,11 @@ public class SubmitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_submit);
     }
 
-    /** Called when the user taps the Send button */
+    /**
+     *  Called when the user taps the True button
+     *
+     *  todo send mail to expert
+     **/
     public void trueAnswer(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         String message = "back";
@@ -24,7 +28,11 @@ public class SubmitActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /** Called when the user taps the Send button */
+    /**
+     * Called when the user taps the False button
+     *
+     *  todo send mail to expert
+     **/
     public void falseAnswer(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         String message = "back";

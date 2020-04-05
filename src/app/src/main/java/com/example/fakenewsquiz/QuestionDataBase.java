@@ -3,19 +3,20 @@ package com.example.fakenewsquiz;
 import java.util.ArrayList;
 import java.util.List;
 
+/* Database with all the questions stored */
 public class QuestionDataBase
 {
     static private QuestionDataBase instance;
     private List<Question> m_list;
 
 
-    // Verhindere die Erzeugung des Objektes über andere Methoden
+    /* private for singleton */
     private QuestionDataBase ()
     {
         loadDataBase();
     }
-    // Eine Zugriffsmethode auf Klassenebene, welches dir '''einmal''' ein konkretes
-    // Objekt erzeugt und dieses zurückliefert.
+
+    /* getInstance for singleton */
     public static QuestionDataBase getInstance () {
         if (QuestionDataBase.instance == null) {
             QuestionDataBase.instance = new QuestionDataBase ();
@@ -23,15 +24,21 @@ public class QuestionDataBase
         return QuestionDataBase.instance;
     }
 
+    /* getter for questions */
     Question getQuestion(int id)
     {
+        // wrap around mechanism.
         int pos= id % m_list.size();
         return m_list.get(pos);
     }
 
+    /*
+    * load all questions into the database
+    *
+    * todo should be on a remote source and within xml file
+    *  */
     public void loadDataBase()
     {
-        // todo should be on a remote source and maybe with xml format.
         m_list = new ArrayList<Question>();
         m_list.add(
                 new Question(

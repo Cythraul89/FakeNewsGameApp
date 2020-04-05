@@ -25,17 +25,28 @@ import android.util.Log;
 import android.util.Xml;
 import android.widget.TextView;
 
+/*
+class storing the user data
+ */
 public class UserData {
 
     static private String filename ="config.xml";
-    // Eine (versteckte) Klassenvariable vom Typ der eigenen Klasse
     private static UserData instance;
     private int m_score=0;
     private int m_question=0;
     private int m_age=48;
     private String m_name="Darth Vader";
 
+    /* private for singleton */
+    private UserData () {}
 
+    /* getInstance for singleton */
+    public static UserData getInstance () {
+        if (UserData.instance == null) {
+            UserData.instance = new UserData ();
+        }
+        return UserData.instance;
+    }
 
     public int getAge() {
         return m_age;
@@ -53,7 +64,6 @@ public class UserData {
         this.m_name = name;
     }
 
-
     public int getScore() {
         return m_score;
     }
@@ -70,17 +80,6 @@ public class UserData {
         this.m_question = m_question;
     }
 
-    // Verhindere die Erzeugung des Objektes über andere Methoden
-    private UserData () {}
-    // Eine Zugriffsmethode auf Klassenebene, welches dir '''einmal''' ein konkretes
-    // Objekt erzeugt und dieses zurückliefert.
-    public static UserData getInstance () {
-        if (UserData.instance == null) {
-            UserData.instance = new UserData ();
-        }
-        return UserData.instance;
-    }
-
     public void increaseScore()
     {
         m_score++;
@@ -91,12 +90,16 @@ public class UserData {
         m_question++;
     }
 
+    /* helper function for load user data */
     private static String getValue(String tag, Element element) {
         NodeList nodeList = element.getElementsByTagName(tag).item(0).getChildNodes();
         Node node = nodeList.item(0);
         return node.getNodeValue();
     }
 
+    /*
+    loads user data from config.xml
+     */
     public void loadUserData(Context context)
     {
         try {
@@ -131,8 +134,9 @@ public class UserData {
 
     }
 
-
-
+    /*
+    stores user data from config.xml
+     */
     public void storeUserData(Context context)
     {
 

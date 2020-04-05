@@ -19,6 +19,7 @@ public class StatusActivity extends AppCompatActivity {
         ImageView mImageView;
         mImageView = (ImageView) findViewById(R.id.imageTrophie3);
 
+        // if more than 2 points are scored, the first trophy is showed.
         if(UserData.getInstance().getScore()<2)
         {
             mImageView.setVisibility(View.INVISIBLE);
@@ -28,7 +29,8 @@ public class StatusActivity extends AppCompatActivity {
             mImageView.setVisibility(View.VISIBLE);
         }
     }
-    /** Called when the user taps the Send button */
+
+    /** Called when the user taps the Back button */
     public void finish(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         String message = "back";

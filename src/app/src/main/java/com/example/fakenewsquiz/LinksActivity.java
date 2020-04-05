@@ -47,7 +47,7 @@ public class LinksActivity extends AppCompatActivity {
         Linkify.addLinks(textView, Linkify.ALL);
     }
 
-    /** Called when the user taps the Send button */
+    /** Called when the user taps the back button */
     public void finish(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         String message = "back";
@@ -55,6 +55,7 @@ public class LinksActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /** loads the links from the links.xml file */
     private void loadList()
     {
         m_list= new ArrayList<String>();

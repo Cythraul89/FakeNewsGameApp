@@ -1,5 +1,8 @@
 package com.example.fakenewsquiz;
 
+/*
+class storing the information for the question
+ */
 public class Question
 {
     private int m_id = 0;
