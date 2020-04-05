@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        UserData.getInstance().loadUserData();
+        UserData.getInstance().loadUserData(this.getApplicationContext());
 
         String text="Score: " + Integer.toString(UserData.getInstance().getScore());
         TextView textView = findViewById(R.id.textScore);

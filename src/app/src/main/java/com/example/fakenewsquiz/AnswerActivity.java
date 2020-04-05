@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.util.Linkify;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -46,19 +47,20 @@ public class AnswerActivity extends AppCompatActivity {
 
         text += question.getAnswer()+"\n\n";
 
-        text+="Sources:\n";
+        text+="Do you want to know more?\n";
         text+= question.getSource()+"\n";
 
         // Capture the layout's TextView and set the string as its text
         textView = findViewById(R.id.textExplain);
         textView.setText(text);
+        Linkify.addLinks(textView, Linkify.ALL);
 
         text="Score: " + Integer.toString(UserData.getInstance().getScore());
         textView = findViewById(R.id.textScore);
         textView.setText(text);
 
 
-        UserData.getInstance().storeUserData();
+        UserData.getInstance().storeUserData(this.getApplicationContext());
 
     }
     /** Called when the user taps the Send button */

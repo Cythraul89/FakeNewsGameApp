@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.util.Linkify;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +23,7 @@ public class LinksActivity extends AppCompatActivity {
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textLink);
         textView.setText(text);
+        Linkify.addLinks(textView, Linkify.ALL);
     }
 
     /** Called when the user taps the Send button */

@@ -45,7 +45,7 @@ public class QuestionDataBase
         m_list.add(
                 new Question(
                         1,
-                        "You can recover from the coronavirus disease (COVID-19). Catching the new coronavirus DOES NOT mean you will have it for life.",
+                        "You can recover from the coronavirus disease (COVID-19). Catching the new coronavirus does not mean you will have it for life.",
                         "Most of the people who chatch covid-19 can recover and eliminate the virus from their bodies"+
                                 "If you catch the disease make sure you treat your symptoms. If you have cough, fever and difficulty breathing, seek medical care early." +
                                 ", but call your health facility by telephone first if possible. Most patients recover thanks to supportive care.",
@@ -69,7 +69,7 @@ public class QuestionDataBase
         m_list.add(
                 new Question(
                         3,
-                        "Drinking alcohol does protect you against COVID-19 and can be dangerous",
+                        "Drinking alcohol does protect you against COVID-19.",
                         "Frequent or excessive alcohol consumption can increase your risk of health problems" +
                                 "Drinking alcohol does not protect you against COVID-19 and can be dangerous.",
                         "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",

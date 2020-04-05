@@ -18,6 +18,7 @@ public class QuestionActivity extends AppCompatActivity {
 
         UserData.getInstance().increaseQuestion();
 
+
         Question question=QuestionDataBase.getInstance().getQuestion(UserData.getInstance().getQuestion());
 
 

@@ -97,10 +97,10 @@ public class UserData {
         return node.getNodeValue();
     }
 
-    public void loadUserData()
+    public void loadUserData(Context context)
     {
         try {
-            final File initialFile = new File("/storage/emulated/0/FakeNewsQuiz",filename);
+            final File initialFile = new File(context.getDataDir(),filename);
             final InputStream targetStream =
                     new DataInputStream(new FileInputStream(initialFile));
 
@@ -112,7 +112,6 @@ public class UserData {
             element.normalize();
 
             NodeList nList = doc. getElementsByTagName("user");
-
 
             for (int i = 0; i < nList.getLength(); i++) {
 
@@ -134,10 +133,10 @@ public class UserData {
 
 
 
-    public void storeUserData()
+    public void storeUserData(Context context)
     {
 
-        File newxmlfile = new File("/storage/emulated/0/FakeNewsQuiz",filename);
+        File newxmlfile = new File(context.getDataDir(),filename);
 
         try{
             newxmlfile.createNewFile();

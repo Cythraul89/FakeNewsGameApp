@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="313dp"
-        android:layout_height="104dp"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
@@ -20,10 +20,12 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="343dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
-        android:text="SciNewsBuster"
+        android:layout_marginEnd="30dp"
+        android:text=" Hi. \n I'm GAIA and shall we start \n our discovery?"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
