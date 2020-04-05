@@ -19,7 +19,7 @@ public class SubmitActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void trueAnswer(View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        String message = "true";
+        String message = "back";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
@@ -27,7 +27,7 @@ public class SubmitActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void falseAnswer(View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        String message = "false";
+        String message = "back";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }

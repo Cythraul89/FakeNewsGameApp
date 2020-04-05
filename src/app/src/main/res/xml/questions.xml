@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml xmlns:android="http://schemas.android.com/apk/res/android">
+    <question>
+        <ask>
+            Exposing yourself to the sun or to temperatures higher than 25 degrees celsius does kill the coronavirus
+        </ask>
+        <solution>
+            You can catch COVID-19, no matter how sunny or hot the weather is. Countries with hot weather have reported cases of COVID-19.
+            To protect yourself make sure you clean your hands frequently and thoroughly and avoid touching your eyes, mouth and nose.
+        </solution>
+        <link>
+            https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters
+        </link>
+        <result>
+            false
+        </result>
+    </question>
+
+    <question>
+        <ask>
+            You can recover from the coronavirus disease (COVID-19). Catching the new coronavirus does not mean you will have it for life.
+        </ask>
+        <solution>
+            Most of the people who catch covid-19 can recover and eliminate the virus from their bodies
+            If you catch the disease make sure you treat your symptoms. If you have cough, fever and difficulty breathing, seek medical care early.
+            , but call your health facility by telephone first if possible. Most patients recover thanks to supportive care.
+        </solution>
+        <link>
+            https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters
+        </link>
+        <result>
+            true
+        </result>
+    </question>
+
+    <question>
+        <ask>
+            Being able to hold your breath for 10 seconds or more without coughing or feeling discomfort does mean you are free from the coronavirus disease (COVID-19)
+        </ask>
+        <solution>
+            The most common symptoms of COVID-19 are dry cough, tiredness and fever. Some people may develop more severe forms of the disease such as pneumonia.
+            The best way to confirm if you have the virus producing COVID-19 disease is with a laboratory test.
+            You cannot confirm it with this breathing exercise, which can even be dangerous.
+        </solution>
+        <link>
+            https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters
+        </link>
+        <result>
+            false
+        </result>
+    </question>
+
+    <question>
+        <ask>
+            Drinking alcohol does protect you against the corona virus.
+        </ask>
+        <solution>
+            Frequent or excessive alcohol consumption can increase your risk of health problems
+            Drinking alcohol does not protect you against COVID-19 and can be dangerous.
+        </solution>
+        <link>
+            https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters
+        </link>
+        <result>
+            false
+        </result>
+    </question>
+</xml>

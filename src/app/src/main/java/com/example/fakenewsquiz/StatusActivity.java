@@ -31,7 +31,7 @@ public class StatusActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void finish(View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        String message = "finish";
+        String message = "back";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }

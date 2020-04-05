@@ -17,8 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        UserData.getInstance().loadUserData(this.getApplicationContext());
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
+        if(message.equals("start")) {
+            UserData.getInstance().loadUserData(this.getApplicationContext());
+        }
+
+        //write score to screen
         String text="Score: " + Integer.toString(UserData.getInstance().getScore());
         TextView textView = findViewById(R.id.textScore);
         textView.setText(text);
@@ -27,40 +33,40 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void startPlay(View view) {
         Intent intent = new Intent(this, QuestionActivity.class);
-        String message = "test";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //String message = "test";
+        //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
     /** Called when the user taps the Send button */
     public void showStatus(View view) {
         Intent intent = new Intent(this, StatusActivity.class);
-        String message = "test";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //String message = "test";
+        //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
     /** Called when the user taps the Send button */
     public void showSubmit(View view) {
         Intent intent = new Intent(this, SubmitActivity.class);
-        String message = "test";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //String message = "test";
+        //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
     /** Called when the user taps the Send button */
     public void showSettings(View view) {
         Intent intent = new Intent(this, SettingsActivity.class);
-        String message = "test";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //String message = "test";
+        //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 
     /** Called when the user taps the Send button */
     public void showLinks(View view) {
         Intent intent = new Intent(this, LinksActivity.class);
-        String message = "test";
-        intent.putExtra(EXTRA_MESSAGE, message);
+        //String message = "test";
+        //intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
 

@@ -31,11 +31,12 @@ public class QuestionDataBase
 
     public void loadDataBase()
     {
+        // todo should be on a remote source and maybe with xml format.
         m_list = new ArrayList<Question>();
         m_list.add(
                 new Question(
                 0,
-                "Exposing yourself to the sun or to temperatures higher than 25C degrees does prevent the coronavirus disease (COVID-19)",
+                "Exposing yourself to the sun or to temperatures higher than 25 degrees celsius does kill the coronavirus",
                 "You can catch COVID-19, no matter how sunny or hot the weather is. Countries with hot weather have reported cases of COVID-19." +
                         "To protect yourself make sure you clean your hands frequently and thoroughly and avoid touching your eyes, mouth and nose.",
                 "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
@@ -46,7 +47,7 @@ public class QuestionDataBase
                 new Question(
                         1,
                         "You can recover from the coronavirus disease (COVID-19). Catching the new coronavirus does not mean you will have it for life.",
-                        "Most of the people who chatch covid-19 can recover and eliminate the virus from their bodies"+
+                        "Most of the people who catch covid-19 can recover and eliminate the virus from their bodies"+
                                 "If you catch the disease make sure you treat your symptoms. If you have cough, fever and difficulty breathing, seek medical care early." +
                                 ", but call your health facility by telephone first if possible. Most patients recover thanks to supportive care.",
                         "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
@@ -57,10 +58,10 @@ public class QuestionDataBase
         m_list.add(
                 new Question(
                         2,
-                        "Being able to hold your breath for 10 seconds or more without coughing or feeling discomfort does mean you are free from the coronavirus disease (COVID-19) or any other lung disease",
+                        "Being able to hold your breath for 10 seconds or more without coughing or feeling discomfort does mean you are free from the coronavirus disease (COVID-19)",
                         "The most common symptoms of COVID-19 are dry cough, tiredness and fever. Some people may develop more severe forms of the disease such as pneumonia."+
                                 "The best way to confirm if you have the virus producing COVID-19 disease is with a laboratory test." +
-                                "You cannot confirm it with this breathing exercise, which can even be dangerouse.",
+                                "You cannot confirm it with this breathing exercise, which can even be dangerous.",
                         "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",
                         "false"
                 )
@@ -69,7 +70,7 @@ public class QuestionDataBase
         m_list.add(
                 new Question(
                         3,
-                        "Drinking alcohol does protect you against COVID-19.",
+                        "Drinking alcohol does protect you against the corona virus.",
                         "Frequent or excessive alcohol consumption can increase your risk of health problems" +
                                 "Drinking alcohol does not protect you against COVID-19 and can be dangerous.",
                         "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters",

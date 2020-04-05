@@ -43,7 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
         UserData.getInstance().storeUserData(this.getApplicationContext());
 
         Intent intent = new Intent(this, MainActivity.class);
-        String message = "finish";
+        String message = "back";
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }

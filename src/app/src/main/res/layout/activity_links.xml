@@ -19,13 +19,14 @@
 
     <TextView
         android:id="@+id/textLink"
-        android:layout_width="310dp"
-        android:layout_height="521dp"
+        android:layout_width="312dp"
+        android:layout_height="413dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:linksClickable="true"
+        android:scrollbars="vertical"
         android:text="1\n2\n3"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toEndOf="parent"
