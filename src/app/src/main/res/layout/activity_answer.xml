@@ -30,10 +30,10 @@
 
     <TextView
         android:id="@+id/textExplain"
-        android:layout_width="344dp"
-        android:layout_height="523dp"
+        android:layout_width="361dp"
+        android:layout_height="383dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="15dp"
         android:text="fdassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
@@ -41,7 +41,8 @@
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textQuestion" />
+        app:layout_constraintTop_toBottomOf="@+id/imageGood"
+        app:layout_constraintVertical_bias="0.93" />
 
     <TextView
         android:id="@+id/textQuestion"
@@ -64,4 +65,25 @@
         android:text="next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageGood"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestion"
+        app:srcCompat="@drawable/good" />
+
+    <ImageView
+        android:id="@+id/imageBad"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageGood"
+        app:srcCompat="@drawable/bad" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AnswerActivity extends AppCompatActivity {
@@ -18,27 +19,35 @@ public class AnswerActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
+        Question question=QuestionDataBase.getInstance().getQuestion(UserData.getInstance().getQuestion());
+
         String text="Question: " + Integer.toString(UserData.getInstance().getQuestion());
         TextView textView = findViewById(R.id.textQuestion);
         textView.setText(text);
 
+        ImageView mImageGood = (ImageView) findViewById(R.id.imageGood);
+        ImageView mImageBad = (ImageView) findViewById(R.id.imageBad);
+
         text="";
-        if(message.equals("true"))
+        if(message.equals(question.getSolution()))
         {
-            text="You are wrong\n";
+            UserData.getInstance().increaseScore();
+            mImageGood.setVisibility(View.VISIBLE);
+            mImageBad.setVisibility(View.INVISIBLE);
+            text="You are right\n";
         }
         else
         {
-            UserData.getInstance().increaseScore();
-            text="You are right\n";
+            mImageGood.setVisibility(View.INVISIBLE);
+            mImageBad.setVisibility(View.VISIBLE);
+            text="You are wrong\n";
         }
 
 
-        text += "You can catch COVID-19, no matter how sunny or hot the weather is. Countries with hot weather have reported cases of COVID-19." +
-        "To protect yourself make sure you clean your hands frequently and thoroughly and avoid touching your eyes, mouth and nose. \n\n";
+        text += question.getAnswer()+"\n\n";
 
         text+="Sources:\n";
-        text+="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters \n";
+        text+= question.getSource()+"\n";
 
         // Capture the layout's TextView and set the string as its text
         textView = findViewById(R.id.textExplain);
@@ -48,6 +57,8 @@ public class AnswerActivity extends AppCompatActivity {
         textView = findViewById(R.id.textScore);
         textView.setText(text);
 
+
+        UserData.getInstance().storeUserData();
 
     }
     /** Called when the user taps the Send button */

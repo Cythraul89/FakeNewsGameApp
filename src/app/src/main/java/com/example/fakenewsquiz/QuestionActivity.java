@@ -18,6 +18,9 @@ public class QuestionActivity extends AppCompatActivity {
 
         UserData.getInstance().increaseQuestion();
 
+        Question question=QuestionDataBase.getInstance().getQuestion(UserData.getInstance().getQuestion());
+
+
         String text="Score: " + Integer.toString(UserData.getInstance().getScore());
         TextView textView = findViewById(R.id.textScore);
         textView.setText(text);
@@ -26,7 +29,7 @@ public class QuestionActivity extends AppCompatActivity {
         textView = findViewById(R.id.textQuestion);
         textView.setText(text);
 
-        text="Exposing yourself to the sun or to temperatures higher than 25C degrees does prevent the coronavirus disease (COVID-19)\n";
+        text=question.getQuestion()+"\n";
         // Capture the layout's TextView and set the string as its text
         textView = findViewById(R.id.textDescription);
         textView.setText(text);

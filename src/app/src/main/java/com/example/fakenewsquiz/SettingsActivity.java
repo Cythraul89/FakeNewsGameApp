@@ -40,6 +40,8 @@ public class SettingsActivity extends AppCompatActivity {
         text=edit.getText().toString();
         UserData.getInstance().setAge(Integer.decode(text));
 
+        UserData.getInstance().storeUserData();
+
         Intent intent = new Intent(this, MainActivity.class);
         String message = "finish";
         intent.putExtra(EXTRA_MESSAGE, message);
